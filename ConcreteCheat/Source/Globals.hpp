@@ -3,7 +3,7 @@
 #define GAME_NAME "cs2.exe"
 #define CLIENT_DLL "client.dll"
 
-#define DISABLE_TIMERS 1
+#define DISABLE_TIMERS 0
 #define USE_LOCALHOST 1
 
 inline const Vector3 Screen = {

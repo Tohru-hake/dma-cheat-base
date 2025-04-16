@@ -16,6 +16,7 @@
     <ProjectGuid>{bf13d237-4600-4231-bf16-5b54b31d375a}</ProjectGuid>
     <RootNamespace>projectx</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ConcreteCheat</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">

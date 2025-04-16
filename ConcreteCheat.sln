@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "project-d", "project-d\project-d.vcxproj", "{BF13D237-4600-4231-BF16-5B54B31D375A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConcreteCheat", "ConcreteCheat\ConcreteCheat.vcxproj", "{BF13D237-4600-4231-BF16-5B54B31D375A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DMALibrary", "DMALibrary\DMALibrary.vcxproj", "{F02F56B1-10CD-4654-B744-93ABE6E15FF0}"
 EndProject

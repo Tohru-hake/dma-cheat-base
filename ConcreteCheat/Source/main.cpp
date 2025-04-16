@@ -60,19 +60,19 @@ int main()
 		return 1;
 	}
 
-	if (!sdk.Init())
-	{
-		LOG_ERROR("Failed to initialize SDK");
-		this_thread::sleep_for(chrono::seconds(5));
-		return 1;
-	}
+	//if (!sdk.Init())
+	//{
+	//	LOG_ERROR("Failed to initialize SDK");
+	//	this_thread::sleep_for(chrono::seconds(5));
+	//	return 1;
+	//}
 
-	if (!features.Init())
-	{
-		LOG_ERROR("Failed to initialize Features");
-		this_thread::sleep_for(chrono::seconds(5));
-		return 1;
-	}
+	//if (!features.Init())
+	//{
+	//	LOG_ERROR("Failed to initialize Features");
+	//	this_thread::sleep_for(chrono::seconds(5));
+	//	return 1;
+	//}
 
 	if (!overlay.Create())
 	{
@@ -96,7 +96,7 @@ int main()
 		if (!drawList)
 			continue;
 
-		esp.Update(drawList);
+		//esp.Update(drawList);
 
 		overlay.EndRender();
 	}
