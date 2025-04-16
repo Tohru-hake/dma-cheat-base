@@ -4,7 +4,7 @@
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <RemoteDebuggerCommand>C:\Users\mvnie\OneDrive\Escritorio\dma\cheese\Project-D\project-d.exe</RemoteDebuggerCommand>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
     <RemoteDebuggerWorkingDirectory>C:\Users\mvnie\OneDrive\Escritorio\dma\cheese\Project-D\</RemoteDebuggerWorkingDirectory>
@@ -13,7 +13,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <RemoteDebuggerCommand>C:\Users\mvnie\OneDrive\Escritorio\dma\cheese\Project-D\project-d.exe</RemoteDebuggerCommand>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
-    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <RemoteDebuggerWorkingDirectory>C:\Users\mvnie\OneDrive\Escritorio\dma\cheese\Project-D\</RemoteDebuggerWorkingDirectory>
     <RemoteDebuggerServerName>ARIS:4026</RemoteDebuggerServerName>
   </PropertyGroup>

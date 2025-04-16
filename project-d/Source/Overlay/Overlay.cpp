@@ -145,14 +145,14 @@ bool Overlay::CreateOverlay()
 	wc.style = CS_CLASSDC;
 	wc.lpfnWndProc = window_procedure;
 	wc.hInstance = GetModuleHandleA(0);
-	wc.lpszClassName = L"Awhare";
+	wc.lpszClassName = L"ConcreteCheat";
 
 	RegisterClassEx(&wc);
 
 	overlay = CreateWindowEx(
 		WS_EX_TOPMOST | WS_EX_TRANSPARENT | WS_EX_LAYERED | WS_EX_TOOLWINDOW,
 		wc.lpszClassName,
-		L"Awhare",
+		L"ConcreteCheat",
 		WS_POPUP,
 		0,
 		0,
@@ -248,7 +248,7 @@ void Overlay::StartRender()
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
-	if (GetAsyncKeyState(VK_INSERT) & 1)
+	if (GetAsyncKeyState(VK_HOME) & 1)
 	{
 		shouldRenderMenu = !shouldRenderMenu;
 
@@ -293,61 +293,61 @@ void Overlay::StyleMenu(ImGuiIO& IO, ImGuiStyle& style)
 	// Disable Ini file
 	IO.IniFilename = nullptr;
 
-    // Custom styles
-    style.WindowRounding    = 0;
-    style.ChildRounding     = 0;
-    style.FrameRounding     = 0;
-    style.GrabRounding      = 0;
-    style.PopupRounding     = 0;
-    style.TabRounding       = 0;
-    style.ScrollbarRounding = 0;
+	// Custom styles
+	style.WindowRounding = 0;
+	style.ChildRounding = 0;
+	style.FrameRounding = 0;
+	style.GrabRounding = 0;
+	style.PopupRounding = 0;
+	style.TabRounding = 0;
+	style.ScrollbarRounding = 0;
 
-    style.ButtonTextAlign   = { 0.5f, 0.5f };
-    style.WindowTitleAlign  = { 0.5f, 0.5f };
-    style.FramePadding      = { 8.0f, 8.0f };
-    style.WindowPadding     = { 10.0f, 10.0f };
-    style.ItemSpacing       = ImVec2(style.WindowPadding.x, style.WindowPadding.y * 0.75f);
-    style.ItemInnerSpacing  = { 10, 4 };
+	style.ButtonTextAlign = { 0.5f, 0.5f };
+	style.WindowTitleAlign = { 0.5f, 0.5f };
+	style.FramePadding = { 8.0f, 8.0f };
+	style.WindowPadding = { 10.0f, 10.0f };
+	style.ItemSpacing = ImVec2(style.WindowPadding.x, style.WindowPadding.y * 0.75f);
+	style.ItemInnerSpacing = { 10, 4 };
 
-    style.WindowBorderSize  = 1;
-    style.FrameBorderSize   = 1;
-    style.PopupBorderSize   = 1;
+	style.WindowBorderSize = 1;
+	style.FrameBorderSize = 1;
+	style.PopupBorderSize = 1;
 
-    style.ScrollbarSize     = 12.f;
-    style.GrabMinSize       = style.FrameRounding;
-    
-    // Colors
-    style.Colors[ImGuiCol_WindowBg]             = ImAdd::HexToColorVec4(0x181818, 0.3f);
-    style.Colors[ImGuiCol_PopupBg]              = ImAdd::HexToColorVec4(0x181818, 1.0f);
-    style.Colors[ImGuiCol_ChildBg]              = ImAdd::HexToColorVec4(0x282828, 1.0f);
+	style.ScrollbarSize = 12.f;
+	style.GrabMinSize = style.FrameRounding;
 
-    style.Colors[ImGuiCol_Text]                 = ImAdd::HexToColorVec4(0xFFFFFF, 1.0f);
-    style.Colors[ImGuiCol_CheckMark]            = style.Colors[ImGuiCol_Text];
-    style.Colors[ImGuiCol_TextDisabled]         = ImAdd::HexToColorVec4(0xA3A3A3, 1.0f);
+	// Colors
+	style.Colors[ImGuiCol_WindowBg] = ImAdd::HexToColorVec4(0x181818, 0.3f);
+	style.Colors[ImGuiCol_PopupBg] = ImAdd::HexToColorVec4(0x181818, 1.0f);
+	style.Colors[ImGuiCol_ChildBg] = ImAdd::HexToColorVec4(0x282828, 1.0f);
 
-    style.Colors[ImGuiCol_SliderGrab]           = ImAdd::HexToColorVec4(0x545070, 1.0f);
-    style.Colors[ImGuiCol_SliderGrabActive]     = ImAdd::HexToColorVec4(0x45425D, 1.0f);
-    
-    style.Colors[ImGuiCol_ScrollbarGrab]        = ImAdd::HexToColorVec4(0x181818, 1.0f);
-    style.Colors[ImGuiCol_ScrollbarGrabHovered] = ImAdd::HexToColorVec4(0x181818, 1.0f);
-    style.Colors[ImGuiCol_ScrollbarGrabActive]  = ImAdd::HexToColorVec4(0x181818, 1.0f);
+	style.Colors[ImGuiCol_Text] = ImAdd::HexToColorVec4(0xFFFFFF, 1.0f);
+	style.Colors[ImGuiCol_CheckMark] = style.Colors[ImGuiCol_Text];
+	style.Colors[ImGuiCol_TextDisabled] = ImAdd::HexToColorVec4(0xA3A3A3, 1.0f);
 
-    style.Colors[ImGuiCol_ScrollbarBg]          = ImVec4(0, 0, 0, 0);
+	style.Colors[ImGuiCol_SliderGrab] = ImAdd::HexToColorVec4(0x545070, 1.0f);
+	style.Colors[ImGuiCol_SliderGrabActive] = ImAdd::HexToColorVec4(0x45425D, 1.0f);
 
-    style.Colors[ImGuiCol_Border]               = ImAdd::HexToColorVec4(0x060606, 1.0f);
-    style.Colors[ImGuiCol_Separator]            = style.Colors[ImGuiCol_Border];
+	style.Colors[ImGuiCol_ScrollbarGrab] = ImAdd::HexToColorVec4(0x181818, 1.0f);
+	style.Colors[ImGuiCol_ScrollbarGrabHovered] = ImAdd::HexToColorVec4(0x181818, 1.0f);
+	style.Colors[ImGuiCol_ScrollbarGrabActive] = ImAdd::HexToColorVec4(0x181818, 1.0f);
 
-    style.Colors[ImGuiCol_Button]               = ImAdd::HexToColorVec4(0x181818, 1.0f);
-    style.Colors[ImGuiCol_ButtonHovered]        = ImAdd::HexToColorVec4(0x181818, 0.7f);
-    style.Colors[ImGuiCol_ButtonActive]         = ImAdd::HexToColorVec4(0x181818, 0.5f);
+	style.Colors[ImGuiCol_ScrollbarBg] = ImVec4(0, 0, 0, 0);
 
-    style.Colors[ImGuiCol_FrameBg]              = ImAdd::HexToColorVec4(0x181818, 1.0f);
-    style.Colors[ImGuiCol_FrameBgHovered]       = ImAdd::HexToColorVec4(0x181818, 0.7f);
-    style.Colors[ImGuiCol_FrameBgActive]        = ImAdd::HexToColorVec4(0x181818, 0.5f);
+	style.Colors[ImGuiCol_Border] = ImAdd::HexToColorVec4(0x060606, 1.0f);
+	style.Colors[ImGuiCol_Separator] = style.Colors[ImGuiCol_Border];
 
-    style.Colors[ImGuiCol_Header]               = ImAdd::HexToColorVec4(0x282828, 1.0f);
-    style.Colors[ImGuiCol_HeaderHovered]        = ImAdd::HexToColorVec4(0x282828, 0.7f);
-    style.Colors[ImGuiCol_HeaderActive]         = ImAdd::HexToColorVec4(0x282828, 0.5f);
+	style.Colors[ImGuiCol_Button] = ImAdd::HexToColorVec4(0x181818, 1.0f);
+	style.Colors[ImGuiCol_ButtonHovered] = ImAdd::HexToColorVec4(0x181818, 0.7f);
+	style.Colors[ImGuiCol_ButtonActive] = ImAdd::HexToColorVec4(0x181818, 0.5f);
+
+	style.Colors[ImGuiCol_FrameBg] = ImAdd::HexToColorVec4(0x181818, 1.0f);
+	style.Colors[ImGuiCol_FrameBgHovered] = ImAdd::HexToColorVec4(0x181818, 0.7f);
+	style.Colors[ImGuiCol_FrameBgActive] = ImAdd::HexToColorVec4(0x181818, 0.5f);
+
+	style.Colors[ImGuiCol_Header] = ImAdd::HexToColorVec4(0x282828, 1.0f);
+	style.Colors[ImGuiCol_HeaderHovered] = ImAdd::HexToColorVec4(0x282828, 0.7f);
+	style.Colors[ImGuiCol_HeaderActive] = ImAdd::HexToColorVec4(0x282828, 0.5f);
 
 	static bool bInit = false;
 	if (!bInit)
@@ -397,7 +397,7 @@ void Overlay::RenderMenu()
 
 	ImGui::SetNextWindowSize(ImVec2(570, 500), ImGuiCond_Always);
 	ImGui::Begin(
-		"Awhare",
+		"ConcreteCheat",
 		&shouldRenderMenu,
 		ImGuiWindowFlags_NoSavedSettings |
 		ImGuiWindowFlags_AlwaysAutoResize |
@@ -408,8 +408,8 @@ void Overlay::RenderMenu()
 
 	float OverlayFps = ImGui::GetIO().Framerate;
 
-	ImGui::SetCursorPosX(ImGui::GetWindowWidth() / 2 - ImGui::CalcTextSize("Awhare").x / 2);
-	ImGui::Text("Awhare");
+	ImGui::SetCursorPosX(ImGui::GetWindowWidth() / 2 - ImGui::CalcTextSize("Concrete Cheat").x / 2);
+	ImGui::Text("Concrete Cheat");
 
 	ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 	ImGui::PushStyleColor(ImGuiCol_ChildBg, style.Colors[ImGuiCol_FrameBg]);
@@ -443,12 +443,12 @@ void Overlay::RenderMenu()
 			{
 				ImGui::BeginGroup(); // Left group
 				{
-					ImGui::BeginChild("Aimbot", ImVec2(fGroupWidth, 
+					ImGui::BeginChild("Aimbot", ImVec2(fGroupWidth,
 						ImGui::GetFrameHeight() + // MenuBar
 						style.WindowPadding.y * 2 + // child padding
 						style.ItemSpacing.x * 15 + // spacing
 						ImGui::GetFontSize() * 10 // checkbox + separators
-					), ImGuiChildFlags_Border, ImGuiWindowFlags_MenuBar); 
+					), ImGuiChildFlags_Border, ImGuiWindowFlags_MenuBar);
 					{
 						if (ImGui::BeginMenuBar()) {
 							ImGui::SetCursorPos(style.FramePadding);
@@ -536,7 +536,7 @@ void Overlay::RenderMenu()
 				{
 					if (ImGui::BeginMenuBar()) {
 						ImGui::SetCursorPos(style.FramePadding);
-						ImAdd::CheckBox("Visuals##Enable", &config.Visuals.Enabled); 
+						ImAdd::CheckBox("Visuals##Enable", &config.Visuals.Enabled);
 						ImGui::EndMenuBar();
 					}
 
@@ -627,7 +627,7 @@ void Overlay::RenderMenu()
 						ImGui::Text("Configs");
 						ImGui::EndMenuBar();
 					}
-						
+
 					static char configName[128] = "";
 					static std::vector<std::string> configFiles;
 
@@ -752,7 +752,7 @@ void Overlay::RenderMenu()
 
 					ImGui::Text("KMBOX:");
 					ImGui::SameLine();
-					ImGui::TextColored(ProcInfo::KmboxInitialized ? ImVec4(0, 1, 0, 1)/* green */: ImVec4(1, 0, 0, 1)/* red */, "%s", ProcInfo::KmboxInitialized ? "Connected" : "Disconnected");
+					ImGui::TextColored(ProcInfo::KmboxInitialized ? ImVec4(0, 1, 0, 1)/* green */ : ImVec4(1, 0, 0, 1)/* red */, "%s", ProcInfo::KmboxInitialized ? "Connected" : "Disconnected");
 
 					ImAdd::SeparatorText("Game");
 
